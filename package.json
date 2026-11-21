@@ -1,0 +1,15 @@
+{
+  "name": "lab6-currency-pwa",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №6: Express и PWA — фиктивные курсы валют за неделю",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["nodejs", "express", "pwa", "service-worker", "currency"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

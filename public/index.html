@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b34">
+  <meta name="description" content="Учебное PWA с фиктивными курсами USD, EUR и CNY за 7 дней">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/style.css">
+  <title>Курсы валют за неделю · Лабораторная №6</title>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Главная">◈ <span>Rate<span class="brand-light">Week</span></span></a>
+      <nav aria-label="Основное меню">
+        <a class="active" href="/">Главная</a>
+        <a href="/about">О проекте</a>
+      </nav>
+      <span class="online-state" id="connection-status">Проверка сети…</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">WEB ТЕХНОЛОГИИ · ЛАБОРАТОРНАЯ №6</div>
+        <h1>Курсы валют <span>за неделю</span></h1>
+        <p>Интерактивная статистика за 7 дней. Выбирайте валюту и смотрите изменения курса и среднее значение.</p>
+        <div class="notice">Демонстрационные данные · Не являются реальными курсами валют</div>
+      </section>
+
+      <section class="dashboard" aria-label="Статистика валют">
+        <div class="section-head">
+          <div>
+            <span class="subheading">ОБЗОР КУРСА</span>
+            <h2>Динамика за 7 дней</h2>
+          </div>
+          <div class="currency-switch" role="group" aria-label="Выбор валюты">
+            <button class="selected" data-currency="USD" aria-pressed="true">USD</button>
+            <button data-currency="EUR" aria-pressed="false">EUR</button>
+            <button data-currency="CNY" aria-pressed="false">CNY</button>
+          </div>
+        </div>
+
+        <div class="stats">
+          <article class="stat"><span>Средний курс</span><strong id="average">—</strong><small>руб. за 1 единицу</small></article>
+          <article class="stat"><span>Первый день</span><strong id="first-rate">—</strong><small>₽ · день 1</small></article>
+          <article class="stat"><span>Последний день</span><strong id="last-rate">—</strong><small>₽ · день 7</small></article>
+          <article class="stat"><span>Изменение за неделю</span><strong id="change">—</strong><small>₽ · день 7 − день 1</small></article>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header"><div><h3 id="chart-title">USD / RUB</h3><p>Фиктивные значения по дням</p></div><span class="legend"><i></i> Курс, ₽</span></div>
+          <div id="chart" class="chart" role="img" aria-label="Столбчатый график курсов по семи дням"></div>
+          <p id="error" class="error" role="alert" hidden></p>
+          <div class="chart-footer"><span>Источник: учебный API Express</span><span id="data-mode">Загрузка…</span></div>
+        </div>
+      </section>
+
+      <section class="api-info"><div><span class="subheading">API ENDPOINT</span><h2>Данные в формате JSON</h2><p>Пример запроса к серверу с параметром пути <code>:currency</code>.</p></div><a id="api-link" href="/api/rates/USD" target="_blank" rel="noopener noreferrer">/api/rates/USD ↗</a></section>
+    </main>
+    <footer>Лабораторная работа №6 · Node.js + Express + PWA <span>Вариант 12</span></footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "RateWeek — Курсы валют за неделю",
+  "short_name": "RateWeek",
+  "description": "Учебное PWA с фиктивными курсами USD, EUR и CNY",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a1120",
+  "theme_color": "#101b34",
+  "lang": "ru",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

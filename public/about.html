@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b34">
+  <meta name="description" content="Информация об учебном проекте Курсы валют за неделю">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/style.css">
+  <title>О проекте · RateWeek</title>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <header class="topbar">
+      <a class="brand" href="/">◈ <span>Rate<span class="brand-light">Week</span></span></a>
+      <nav aria-label="Основное меню"><a href="/">Главная</a><a class="active" href="/about">О проекте</a></nav>
+      <span class="online-state" id="connection-status">Проверка сети…</span>
+    </header>
+    <main class="about-main">
+      <section class="hero"><div class="eyebrow">WEB ТЕХНОЛОГИИ · ВАРИАНТ 12</div><h1>О <span>проекте</span></h1><p>Учебное приложение для просмотра фиктивных курсов USD, EUR и CNY за 7 дней.</p></section>
+      <div class="about-grid">
+        <article class="info-card"><span class="subheading">НАЗНАЧЕНИЕ</span><h2>Лабораторная работа №6</h2><p>Освоение Node.js, Express, маршрутизации, параметров URL, статических файлов и базовых возможностей прогрессивного веб-приложения (PWA).</p></article>
+        <article class="info-card"><span class="subheading">ТЕХНОЛОГИИ</span><h2>Стек проекта</h2><p>Node.js · Express · HTML · CSS · JavaScript · Web App Manifest · Service Worker.</p></article>
+        <article class="info-card"><span class="subheading">МАРШРУТЫ</span><h2>API и страницы</h2><p><code>GET /</code> — главная<br><code>GET /about</code> — о проекте<br><code>GET /api/status</code> — состояние сервера<br><code>GET /api/rates/:currency</code> — курсы валют</p></article>
+        <article class="info-card"><span class="subheading">ОФЛАЙН-РЕЖИМ</span><h2>Установка PWA</h2><p>Service worker кеширует страницы, стили, скрипты и ответы API. После первого успешного посещения приложение можно открывать без сети.</p></article>
+      </div>
+      <a class="back" href="/">← Вернуться к графику</a>
+    </main>
+    <footer>Лабораторная работа №6 · Node.js + Express + PWA <span>Вариант 12</span></footer>
+  </div>
+</body>
+</html>
